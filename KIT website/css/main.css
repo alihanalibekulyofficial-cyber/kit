@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+  background: linear-gradient(90deg, rgba(42,123,155,1) 0%, rgba(26,217,105,1) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(26, 217, 105, 1) 100%);
+    width: 100%;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #ff8000;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #efb376;
+    border-radius: 5px;
+}
+
+header nav ul li.btn a {
+    background: #efb376;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover {
+    background: #ff8000;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    color: #ff8000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background: #ff8000;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: none;
+    transition: all 500ms ease;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+}
+
+.trending {
+    padding-top: 50px;
+}
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all {
+    color: #fff;
+    background: #17a0b8;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .games {
+  display: flex;
+  gap: 44px;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+
+.trending .card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 25px 20px; /* отступы от краёв */
+  width: 250px;        /* чуть шире для текста */
+  text-align: center;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.trending .card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.22);
+}
+
+.trending .card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.trending .card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.trending .card p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;  /* текст внутри аккуратно выровнен */
+  word-break: break-word; /* перенос длинных строк */
+}
+
+.big-text {
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+.banner {
+    padding: 80px 0;
+}
+
+.banner h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+ }
+
+.banner img {
+  display: block;
+  margin: 30px auto 0 auto; /* центрирование */
+  width: 700px;             /* размер картинки */
+  border-radius: 20px;      /* скругление краёв */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  margin-bottom: 30px;
+}
+
+.features {
+    background: url('/img/ithub.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+/* ===== CONTACTS ===== */
+.contacts {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contacts-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-card, .map-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.contact-card h4 {
+  margin-bottom: 15px;
+  color: #ffb347;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* ===== PARTNER LOGO CARDS FIX ===== */
+.features .block {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+.features .block:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.reviews-grid {
+  position: relative;
+  margin-top: 40px;
+  min-height: 500px;
+}
+
+.review {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.review span {
+  display: block;
+  margin-top: 10px;
+  color: #ffb347;
+  font-weight: 600;
+}
+
+/* разброс */
+.r1 { top: 0; left: 10%; }
+.r2 { top: 60px; left: 50%; }
+.r3 { top: 200px; left: 20%; }
+.r4 { top: 250px; left: 60%; }
+.r5 { top: 380px; left: 35%; }
+.r6 { top: 120px; left: 75%; }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* ===== BURGER MENU ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .container {
+    width: 92%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    border-radius: 15px;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .nav ul.show {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* hero */
+  .hero {
+    text-align: center;
+  }
+
+  .hero img {
+    position: static;
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .hero--info {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  /* specialties cards */
+  .trending .games {
+    justify-content: center;
+  }
+
+  /* partners grid */
+  .features .container {
+    text-align: center;
+  }
+
+  /* contacts */
+  .contacts-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* reviews tidy mobile */
+  .reviews-grid {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .review {
+    position: static;
+    width: 100%;
+  }
+}
+
+.features .container {
+  text-align: center;
+}
+
+.features .block {
+  width: 140px;
+}
